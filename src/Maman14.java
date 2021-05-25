@@ -13,7 +13,7 @@ public class Maman14 {
     public static int D(int[] a){
         int U_Size = 1;
         for(int i = 1; i<a.length; i++){ //
-            boolean U = true;
+            boolean U = true;d
             for(int j = 0; j<U_Size; j++){
                 if(a[i]==a[j]){
                     U = false;
