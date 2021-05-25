@@ -1,9 +1,14 @@
 public class Maman14 {
     public static void main(String[] args) {
-        int[] x = {1,2,3,4,5};
+        int[] x = {1,2,3,4,5,6,7,8,8,9,8};
         System.out.println(D(x));
     }
-
+    /**
+     *
+     */
+    public static int insertionTest(int[] array){
+        return 0;
+    }
     /**
      * Original method from Maman11. The method gets an array and checks the amount of duplicates it has.
      * The given algorithm has the same method names as in the Maman11, that is for the purpose of consistency.
@@ -21,8 +26,8 @@ public class Maman14 {
                 }
             }
             if(U){
-                U_Size++;
                 a[U_Size]=a[i];
+                U_Size++;
             }
         }
         return U_Size;
