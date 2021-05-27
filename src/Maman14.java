@@ -105,7 +105,7 @@ public class Maman14 {
         int assignments = 0;
         int comparisons = 0;
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-        for (int j : array) { //Build a heap - takes O(nlogn) time with O(n) space
+        for (int j : array) {  //Build a heap - takes O(nlogn) time with O(n) space
             assignments++;
             minHeap.add(j);
         }
