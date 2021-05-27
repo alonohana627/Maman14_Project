@@ -47,38 +47,6 @@ public class Maman14 {
         HashTable table = new HashTable(placeHolderArray); table.statistics();
     }
     /**
-     * Original method from Maman11. The method gets an array and checks the amount of duplicates it has.
-     * The given algorithm has the same method names as in the Maman11, that is for the purpose of consistency.
-     * @param a - given Array
-     * @return the amount of duplicates in a given array.
-     */
-    public static int D(int[] a){
-        int assignments = 0;
-        int comparisons = 0;
-        int U_Size = 1;
-        for(int i = 1; i<a.length; i++){ //
-            boolean U = true;
-            for(int j = 0; j<U_Size; j++){
-                if(a[i]==a[j]){
-                    U = false;
-                    j=U_Size;
-                    assignments+=2;
-                }
-                comparisons++;
-            }
-            if(U){
-                a[U_Size]=a[i];
-                U_Size++;
-                assignments++;
-            }
-            comparisons++;
-        }
-        System.out.println("The number of comparisons: "+comparisons+
-                "\nThe number of assignments: "+assignments+
-                "\nThe amount of unique numbers: "+U_Size);
-        return U_Size;
-    }
-    /**
      * Using an insertion sort in order to check the amount of the unique numbers in a given array.
      * The method gets an array and posts the following:
      * 1. The number of unique numbers
@@ -204,5 +172,37 @@ public class Maman14 {
         System.out.println("The number of comparisons: "+comparisons+
                 "\nThe number of assignments: "+assignments+
                 "\nThe amount of unique numbers: "+sum);
+    }
+    /**
+     * Original method from Maman11. The method gets an array and checks the amount of duplicates it has.
+     * The given algorithm has the same method names as in the Maman11, that is for the purpose of consistency.
+     * @param a - given Array
+     * @return the amount of duplicates in a given array.
+     */
+    public static int D(int[] a){
+        int assignments = 0;
+        int comparisons = 0;
+        int U_Size = 1;
+        for(int i = 1; i<a.length; i++){ //
+            boolean U = true;
+            for(int j = 0; j<U_Size; j++){
+                if(a[i]==a[j]){
+                    U = false;
+                    j=U_Size;
+                    assignments+=2;
+                }
+                comparisons++;
+            }
+            if(U){
+                a[U_Size]=a[i];
+                U_Size++;
+                assignments++;
+            }
+            comparisons++;
+        }
+        System.out.println("The number of comparisons: "+comparisons+
+                "\nThe number of assignments: "+assignments+
+                "\nThe amount of unique numbers: "+U_Size);
+        return U_Size;
     }
 }
